@@ -1,24 +1,18 @@
 /** main.ts */
 
-const onOpen = () => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function onOpen(): void {
   SpreadsheetApp.getUi()
     .createMenu('TCDEV TOOLS')
     .addItem('Say Hello', 'sayHello')
     .addToUi();
-};
+}
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function sayHello(): void {
-  const response: GoogleAppsScript.ButtonSet.OK = SpreadsheetApp.getUi().alert(
+  SpreadsheetApp.getUi().alert(
     'tcdev.alert()',
     'Hello, World!',
     SpreadsheetApp.getUi().ButtonSet.OK
   );
-
-  if (response === SpreadsheetApp.getUi().ButtonSet.OK) {
-    Logger.log(`response from alert is the UI Button that was clicked`);
-    Logger.log(response);
-  } else {
-    Logger.log(`response was NOT the button that was clicked?`);
-    Logger.log(response);
-  }
 }
