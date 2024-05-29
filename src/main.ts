@@ -1,4 +1,4 @@
-/** main.js */
+/** main.ts */
 
 const onOpen = () => {
   SpreadsheetApp.getUi()
@@ -7,8 +7,8 @@ const onOpen = () => {
     .addToUi();
 };
 
-function sayHello() {
-  const response = SpreadsheetApp.getUi().alert(
+function sayHello(): void {
+  const response: GoogleAppsScript.ButtonSet.OK = SpreadsheetApp.getUi().alert(
     'tcdev.alert()',
     'Hello, World!',
     SpreadsheetApp.getUi().ButtonSet.OK
