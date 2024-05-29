@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["ES2019"],
-    "noImplicitUseStrict": true,
     "experimentalDecorators": true,
-    "isolatedModules": true,
-    "noLib": true,
     "noResolve": true,
     "module": "None",
   }
